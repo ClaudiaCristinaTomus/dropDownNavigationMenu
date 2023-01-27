@@ -55,7 +55,7 @@ body{
     display: none;
     position: absolute;
     color:black;
-    min-width: 160px;
+    min-width: 100px;
    
     z-index: 1;
   }
@@ -94,6 +94,9 @@ body{
     text-decoration: none;
 }
 
+.left{
+    margin-left:750px;
+}
 
 
 .all{
@@ -133,6 +136,7 @@ img{
     justify-content: center;
     flex-direction: row;
     align-items: center;
+    padding:0px 60px;
    
 }
 
@@ -153,4 +157,124 @@ footer .attribution{
 
 .all .right{
     margin:40px 0px 0px 50px;
+}
+
+.left .learn{
+        display: inline-block;
+        background-color: rgb(251, 247, 247);
+        padding: 20px;
+        width: 200px;
+        color:black;
+        text-align: center;
+        border: 2px double black;
+        border-radius: 10px;
+        font-size: 20px;
+        cursor: pointer; /* add this line */
+        margin: 5px; /* add this line */
+    
+}
+
+.left .register{
+    display:inline;
+    background-color: rgb(251, 247, 247);
+    padding: 5px;
+    width: 90px;
+    color:black;
+    text-align: center;
+    border: 2px double black;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer; /* add this line */
+    margin: 2px; /* add this line */
+
+}
+.hamburger{
+    display:none;
+    cursor:pointer;
+}
+
+.bar{
+    display:block;
+    width:25px;
+    height:3px;
+    margin:5px auto;
+    -webkit-transition:all 0.3s ease-in-out;
+    background-color: black;
+}
+
+
+@media screen and (max-width: 768px){
+   .hamburger{
+    display:block;
+    
+   }
+
+   .header .hamburger{
+    right:0;
+   }
+   .hamburger.active .bar:nth-child(2){
+    opacity:0;
+   }
+
+   .hamburger.active .bar:nth-child(1){
+    transform:translateY(8px) rotate(45deg);
+   }
+   .hamburger.active .bar:nth-child(3){
+    transform:translateY(-8px) rotate(-45deg);
+   }
+   .logo{display:none;}
+   .nav{
+    position:fixed;
+    right:-100%;
+    top:10px;
+ 
+    flex-direction: column;
+    background-color: rgb(251, 247, 247);
+    width:50%;
+    height:100%;
+    text-align: center;
+    transition:0.3s;
+   }
+   .nav .nav2{
+    display:flex;
+    flex-direction: column;
+   }
+   .nav .dropdown-content{
+    
+    padding:50px 0px;
+    min-height: 100px;
+    
+
+   }
+   .nav .nav2{
+    margin:0 auto;
+    display:flex;
+    flex-wrap: wrap;
+   }
+   
+  
+
+   .nav.active{
+    right:0;
+   }
+
+   .all{
+    display:flex;
+    flex-direction: column;
+   }
+   img{
+    width:100%;
+   }
+   .left .left1{
+    display:flex;
+    flex-direction: column;
+    margin-top:100px;
+   }
+   footer .attribution{
+    display:flex;
+    flex-direction: column;
+    margin:auto 0;
+    padding:20px 0px;
+   }
+
 }
